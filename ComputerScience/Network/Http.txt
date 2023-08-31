@@ -104,9 +104,24 @@ HTML Form 전송은 GET, POST만 지원
 HTTP API 설계 예시
 https://restfulapi.net/resource-naming
 
+HTTP 상태코드
+
+1xx(Informational) : 요청이 수신되어 처리중
+2xx(Successful) : 요청 정상 처리
+3xx(Redirection) : 요청을 완료하려면 추가 행동이 필요
+	- 302(Found) -> GET으로 변할 수 있음
+	- 307(Temporary Redirect) -> 메서드가 변하면 안됨
+	- 303(See Other) -> 메서드가 GET으로 변경
+4xx(Client Error) : 클라이언트 오류(잘못된 문법 등)
+5xx(Server Error) : 서버 오류
 
 
+일시적인 리다이렉션
+POST/REDIRECT/GET
+	- POST로 주문후 응답으로 303(302)로 응답
+	- Location에 결과화면 명시
 
+ 
 
 
 
