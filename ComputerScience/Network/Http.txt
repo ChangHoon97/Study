@@ -171,6 +171,9 @@ Cache-Control
 - Cache-Control: no-cache, no-store, must-revalidate
   Pragma : no-cache
 
+no-cache 와 must-revalidate의 차이
+- no-cache는 원 서버에 접근할 수 없는 경우 Error or 200 OK로 default 값 설정 가능
+- must-revalidate는 원 서버에 접근할 수 없는 경우 504 Gateway Timeout 오류가 발생
 
 
 
