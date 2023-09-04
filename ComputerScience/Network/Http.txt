@@ -146,13 +146,30 @@ ex) ko-KR,ko;q=0.9,en-US;q=0.8
 - cache-control: max-age=60 으로 캐시 유효시간 설정
 
 검증헤더
+1. Last-Modified
 - Last-Modified: xxxxxxxxxxxx (응답)
 - if-modified-since : xxxxxxxxxxxx (요청)
 - 캐시 만료 후 서버에 재요청 시 데이터가 수정되지 않았을 때 304 Not Modified 응답 (HTTP Body가 없음)
 
+2. ETag(Entity Tag)
+- 캐시용 데이터에 임의의 고유한 버전 이름을 달아둠
+- ETag만 보내서 같으면 유지, 다르면 다시 받기
+- If-None-Match : xxxxxxxxxxxx (요청)
+- ETag가 같다면 304 Not Modified 응답
 
+캐시 제어 헤더
+Cache-Control
+- Cache-Control : xxxxxxx
+- max-age : 캐시 유효시간(초 단위)
+- no-cache : 데이터는 캐시해도 되지만, 항상 서버에 검증하고 사용
+- no-store : 데이터에 민감한 정보가 있으므로 저장하면 안됨
+- public : 응답이 public 캐시에 저장되어도 됨
+- private : private 캐시에 저장해야 함(default)
+- s-maxage ; 프록시 캐시에만 적용되는 max-age
 
-
+확실한 캐시 무효화 응답
+- Cache-Control: no-cache, no-store, must-revalidate
+  Pragma : no-cache
 
 
 
