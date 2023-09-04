@@ -122,15 +122,33 @@ POST/REDIRECT/GET
 	- Location에 결과화면 명시
 
  
-HTTP 헤더
+
+HTTP 협상 : 클라이언트가 선호하는 표현 요청
+- Accept: 클라이언트가 선호하는 미디어 타입 전달
+- Accept-Charset : 클라이언트가 선호하는 문자 인코딩
+- Accept-Encoding : 클라이언트가 선호하는 압축 인코딩
+- Accept-Language : 클라이언트가 선호하는 자연 언어
+
+선호하는 타입을 quality 값을 줘 우선순위를 둘 수 있다
+ex) ko-KR,ko;q=0.9,en-US;q=0.8
 
 
 
+쿠키
+- 클라이언트가 서버에서 받은 쿠키를 저장하고, HTTP 요청시 서버로 전달
+- 모든 요청에 쿠키 정보 자동 포함
 
 
+캐시
+- 네트워크 사용량 감소
+- 브라우저 로딩 속도 증가
+- 빠른 사용자 경험
+- cache-control: max-age=60 으로 캐시 유효시간 설정
 
-
-
+검증헤더
+- Last-Modified: xxxxxxxxxxxx (응답)
+- if-modified-since : xxxxxxxxxxxx (요청)
+- 캐시 만료 후 서버에 재요청 시 데이터가 수정되지 않았을 때 304 Not Modified 응답 (HTTP Body가 없음)
 
 
 
