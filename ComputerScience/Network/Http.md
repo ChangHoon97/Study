@@ -11,7 +11,7 @@
 	- HTTP 지속연결(Persistent Connections)를 사용하여 시간 단축
 <br><br>
 ## HTTP 메시지
- 1. 메시지 구조<br>
+1. 메시지 구조<br>
 	 시작 라인 -> 헤더 -> 공백 라인 -> 바디
 <br><br>
 ## 시작 라인
