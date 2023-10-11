@@ -30,10 +30,20 @@
 
 <br>
 
+### Iterator
+- 컬렉션에 저장된 요소들을 읽어오는 방법을 표준화한 것
+- 단방향으로만 읽기 가능(양방향 읽기는 ListIterator 사용)
+- Iterator<String> testIterator = testList.iterator();
+- 메서드 : boolean hasNext(), Object next(), void remove();
+
+
+<br>
+
 ### Collection 인터페이스 메서드
 - boolean add(Object o) : 지정된 객체(o)를 Collection에 추가한다.
 - void remove(Object o) : 지정된 객체(o)를 삭제한다.
 - void clear() : Collection의 모든 객체를 삭제한다.
+- Iterator iterator() : Collection의 Iterator를 반환
 - boolean contains(Object o) : 지정된 객체(o)가 Collection에 포함되어있는지 확인한다.
 - boolean isEmpty() : Collection이 비어있는지 확인한다.
 - **boolean removeAll(Collection c)** : Collection(c)에 포함된 객체들을 삭제한다
