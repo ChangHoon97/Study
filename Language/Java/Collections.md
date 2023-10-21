@@ -27,6 +27,8 @@
 - Key 데이터는 중복 허용
 - Value 데이터는 중복 불가
 - 구현 클래스 : HashMap, TreeMap, HashTable, Properties
+- #### MultiValueMap
+  - Map의 형태를 하고 있지만 데이터의 중복이 가능한 형태
 
 <br>
 
